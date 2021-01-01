@@ -11,6 +11,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { AdminPagesComponent } from './components/admin-pages/admin-pages.component';
 import { RecipientFormComponent } from './components/recipient-form/recipient-form.component';
 import { AdminRecordsComponent } from './components/admin-records/admin-records.component';
+import { ProfileComponent } from './components/profile/profile.component';
 // import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AdminRecordsComponent } from './components/admin-records/admin-records.
     AdminPagesComponent,
     RecipientFormComponent,
     AdminRecordsComponent,
+    ProfileComponent,
     // SignupComponent
   ],
   imports: [
