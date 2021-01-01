@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SignupComponent } from './signup/signup.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AdminPagesComponent } from './components/admin-pages/admin-pages.component';
+import { RecipientFormComponent } from './components/recipient-form/recipient-form.component';
+import { AdminRecordsComponent } from './components/admin-records/admin-records.component';
+// import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { SignupComponent } from './signup/signup.component';
     HomeComponent,
     FooterComponent,
     NavbarComponent,
-    SignupComponent
+    ContactUsComponent,
+    AdminPagesComponent,
+    RecipientFormComponent,
+    AdminRecordsComponent,
+    // SignupComponent
   ],
   imports: [
     BrowserModule,
