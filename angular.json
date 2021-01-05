@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "bloodbankfront"
+  "defaultProject": "bloodbankfront",
+  "cli": {
+    "analytics": "f9c6b7ea-3aaf-4d83-9933-39614ff08fd1"
+  }
 }

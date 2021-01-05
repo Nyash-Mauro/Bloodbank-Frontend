@@ -1,26 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {  CampsComponent } from './components/camps/camps.component';
 import { HomeComponent } from './components/home/home.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { LoginComponent } from './components/login/login.component';
-import { LogoutComponent } from './components/logout/logout.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AboutComponent } from './components/about/about.component';
+import { DonorRegistrationComponent } from './components/auth/donor-registration/donor-registration.component';
+import { RecepientRegistrationComponent} from './components/auth/recepient-registration/recepient-registration.component';
+
 
 const routes: Routes = [
+  { path: 'about', component: AboutComponent},
+  { path: 'home', component: HomeComponent},
+  { path: 'camps', component: CampsComponent},
+  { path: 'donor', component:  DonorRegistrationComponent},
+  { path: 'recepient', component:  RecepientRegistrationComponent},
 
-  {path: '', redirectTo: 'login', pathMatch:'full'},
-  {path: 'home', component: HomeComponent,},
+  { path: '', redirectTo:"/home", pathMatch:"full"},
 
-  {path: 'profile', component: ProfileComponent},
-  { path: 'signup', component: SignupComponent },
-
-  { path: 'login', component: LoginComponent },
-  { path: 'logout', component: LogoutComponent },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+
