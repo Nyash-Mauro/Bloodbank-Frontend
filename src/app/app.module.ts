@@ -9,7 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RecepientRegistrationComponent } from './components/auth/recepient-registration/recepient-registration.component';
 import { DonorRegistrationComponent } from './components/auth/donor-registration/donor-registration.component';
 import { HomeComponent } from './components/home/home.component';
-import { FooterComponent } from './components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
     RecepientRegistrationComponent,
     DonorRegistrationComponent,
     HomeComponent,
-    FooterComponent
+    
   ],
   imports: [
     BrowserModule,
