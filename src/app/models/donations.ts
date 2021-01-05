@@ -1,10 +1,13 @@
 import { Identifiers } from "@angular/compiler";
 export class Donations {
-    User:Identifiers;
-    facility:string;
-    donate_date:Date;
-    last_donate_date:Date;
-    location:string;
-    blood_group:string;
-    medical_condition:string;
+    constructor(
+       public User:Identifiers,
+       public facility:string,
+       public donate_date:Date,
+       public last_donate_date:Date,
+       public location:string,
+       public blood_group:string,
+       public medical_condition:string,
+    ) {}
+
 }

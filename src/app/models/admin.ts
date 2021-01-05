@@ -1,4 +1,6 @@
 export class Admin {
-    admin_id:Admin;
+    constructor(
+        private admin_id:Admin,
+    ){}
 }
 

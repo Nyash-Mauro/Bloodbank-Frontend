@@ -1,5 +1,7 @@
 export class Conditions {
-    condition_name:string;
-    description:string;
-    other_details:string;
+    constructor(
+        condition_name:string,
+        description:string,
+        other_details:string,
+    ){}
 }
