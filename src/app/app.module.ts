@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CampsComponent } from './components/camps/camps.component';
 import { AboutComponent } from './components/about/about.component';
@@ -9,7 +8,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RecepientRegistrationComponent } from './components/auth/recepient-registration/recepient-registration.component';
 import { DonorRegistrationComponent } from './components/auth/donor-registration/donor-registration.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { FooterComponent } from './components/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AdminPagesComponent } from './components/admin-dashboard/admin-pages/admin-pages.component';
+import { RecipientFormComponent } from './components/recipient-form/recipient-form.component';
+import { AdminRecordsComponent } from './components/admin-dashboard/admin-records/admin-records.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AdminAddUserComponent } from './components/admin-dashboard/admin-add-user/admin-add-user.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,18 @@ import { HomeComponent } from './components/home/home.component';
     RecepientRegistrationComponent,
     DonorRegistrationComponent,
     HomeComponent,
-    
+    FooterComponent,
+    ContactUsComponent,
+    AdminPagesComponent,
+    RecipientFormComponent,
+    AdminRecordsComponent,
+    ProfileComponent,
+    AdminAddUserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    // AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
