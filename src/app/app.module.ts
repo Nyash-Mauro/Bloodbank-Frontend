@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 import { AppComponent } from './app.component';
 import { CampsComponent } from './components/camps/camps.component';
 import { AboutComponent } from './components/about/about.component';
@@ -36,7 +36,7 @@ import { AdminAddUserComponent } from './components/admin-dashboard/admin-add-us
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
+    AppRoutingModule,
     NgbModule
   ],
   providers: [],

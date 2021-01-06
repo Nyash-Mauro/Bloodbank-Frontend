@@ -1,1 +1,84 @@
-<p>profile works!</p>
+
+<hr>
+<app-navbar></app-navbar>
+<div class="container bootstrap snippet">
+    <div class="row">
+        <div class="col-sm-10">
+            <!-- <h1>Name</h1> -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <!--left col-->
+            <div class="text-center"></div>
+            <img src="" class="avatar img-circle img-thumbnail" alt="avatar">
+            <h6>Upload a photo</h6>
+            <input type="file" class="text-center center-block file-upload">
+        </div>
+        <!--/col-3-->
+        <div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">My Bio</a></li>
+                <li><a data-toggle="tab" href="#messages">Edit Profile</a></li>
+
+            </ul>
+
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <hr>
+                    <form class="form" action="##" method="post" id="registrationForm">
+
+                        <div class="form-group">
+
+                            <div class="col-md-4 col-lg-9 col-xl-9 mx-auto mt-3 personal-info" id="details">
+
+                                <!-- <h3>My Bio</h3> -->
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <input class="col-md-12 form-control" placeholder="Full Name" type="text">
+                                        <!-- <input class="col-md-3 form-control" placeholder="middle name" type="text">
+                                        <input class="col-md-3 form-control" placeholder="last name" type="text"> -->
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <input class="form-control" placeholder="email Address" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <label for="female">Female</label><br>
+                                        <input type="checkbox" id="female" name="female" value="female">
+                                    </div>
+                                    <div class="">
+                                        <label for="male">male</label><br>
+                                        <input type="checkbox" id="female" name="male" value="male">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <input class="form-control" placeholder="D.O.B" type="date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <input class="form-control" placeholder="Phone Number" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <input class="form-control" placeholder="Weight" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-8">
+                                            <input class="form-control" placeholder="Location" type="text">
+                                        </div>
+                                    </div>
+                                    <button mat-raised-button type="submit" class="btn btn-danger pull-right" >Update
+                                        Profile</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
