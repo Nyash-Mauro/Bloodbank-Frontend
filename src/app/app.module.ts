@@ -11,11 +11,10 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { AdminPagesComponent } from './components/admin-dashboard/admin-pages/admin-pages.component';
-import { RecipientFormComponent } from './components/recipient-form/recipient-form.component';
-import { AdminRecordsComponent } from './components/admin-dashboard/admin-records/admin-records.component';
+import { RecipientFormComponent } from './components/admin-dashboard/recipient-form/recipient-form.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { AdminAddUserComponent } from './components/admin-dashboard/admin-add-user/admin-add-user.component';
+import { AdminRoutingModule } from './components/admin-dashboard/admin.routing.component';
+import { DashboardComponent } from './components/admin-dashboard/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +27,10 @@ import { AdminAddUserComponent } from './components/admin-dashboard/admin-add-us
     HomeComponent,
     FooterComponent,
     ContactUsComponent,
-    AdminPagesComponent,
     RecipientFormComponent,
-    AdminRecordsComponent,
     ProfileComponent,
-    AdminAddUserComponent
+    DashboardComponent,
+    // AdminRoutingModule
   ],
   imports: [
     BrowserModule,
