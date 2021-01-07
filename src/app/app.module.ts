@@ -13,7 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RecipientFormComponent } from './components/admin-dashboard/recipient-form/recipient-form.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { AdminRoutingModule } from './components/admin-dashboard/admin.routing.component';
+import { AdminRoutingModule } from './components/admin-dashboard/admin-routing.module';
 import { DashboardComponent } from './components/admin-dashboard/dashboard/dashboard.component';
 
 @NgModule({
@@ -30,12 +30,13 @@ import { DashboardComponent } from './components/admin-dashboard/dashboard/dashb
     RecipientFormComponent,
     ProfileComponent,
     DashboardComponent,
-    // AdminRoutingModule
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    AdminRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
