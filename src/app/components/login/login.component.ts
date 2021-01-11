@@ -20,14 +20,14 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    this.userService.loginHere(this.input).subscribe((res: Response) => {
-      console.log(res)
-      localStorage.setItem('loggedIn', res['token'])
-      this.router.navigate(['/profile'])
-    }, error => {
-      console.log('error');
-      this.router.navigate(['/signup']);
-    })
+    // this.userService.loginHere(this.input).subscribe((res: Response) => {
+    //   console.log(res)
+    //   localStorage.setItem('loggedIn', res['token'])
+    //   this.router.navigate(['/profile'])
+    // }, error => {
+    //   console.log('error');
+    //   this.router.navigate(['/signup']);
+    // })
   }
   
 }

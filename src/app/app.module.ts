@@ -13,8 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RecipientFormComponent } from './components/admin-dashboard/recipient-form/recipient-form.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { AdminRoutingModule } from './components/admin-dashboard/admin-routing.module';
 import { DashboardComponent } from './components/admin-dashboard/dashboard/dashboard.component';
+import { UserdashboardComponent } from './components/userdashboard/userdashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +30,13 @@ import { DashboardComponent } from './components/admin-dashboard/dashboard/dashb
     RecipientFormComponent,
     ProfileComponent,
     DashboardComponent,
+    UserdashboardComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AdminRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
