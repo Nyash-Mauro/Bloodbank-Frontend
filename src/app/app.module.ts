@@ -16,6 +16,11 @@ import { AdminRecordsComponent } from './components/admin-dashboard/admin-record
 import { ProfileComponent } from './components/profile/profile.component';
 import { AdminAddUserComponent } from './components/admin-dashboard/admin-add-user/admin-add-user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { LoginComponent } from './components/auth/login/login.component';
+
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,11 +38,16 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AdminRecordsComponent,
     ProfileComponent,
     AdminAddUserComponent,
-    DashboardComponent
+    DashboardComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

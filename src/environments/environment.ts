@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  loginEndpoint: 'https://bloodbankmanagementsystem.herokuapp.com/api/login/',
+  signUpEndpoint: 'https://bloodbankmanagementsystem.herokuapp.com/users/'
+  // signUpEndpoint: "http://127.0.0.1:8000/users/"
 };
 
 /*
