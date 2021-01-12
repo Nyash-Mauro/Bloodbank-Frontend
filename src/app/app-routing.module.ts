@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { DonorRegistrationComponent } from './components/auth/donor-registration/donor-registration.component';
 import { RecepientRegistrationComponent} from './components/auth/recepient-registration/recepient-registration.component';
+import { ContactUsComponent} from './components/contact-us/contact-us.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'camps', component: CampsComponent},
   { path: 'donor', component:  DonorRegistrationComponent},
   { path: 'recepient', component:  RecepientRegistrationComponent},
+  { path: 'contact', component:   ContactUsComponent},
 
   { path: '', redirectTo:"/home", pathMatch:"full"},
 
