@@ -1,27 +1,23 @@
-
-<div class="container registration-form selectDisable">
-    <img src="" alt="logo" class="center">
-    <p>Login to Bloodbank</p>
-    <form class="form">
-
+<!-- <app-navbar></app-navbar> -->
+<div class="bg-img">
+    <div class="container">
+      <h3 class="text-center" style="padding-top: 6%;">Log in</h3>
+      <form>
         <div class="form-group">
-            <input type="email"  [(ngModel)]="input.username" class="form-control" name="username" id="email" autocomplete="off" placeholder=" "
-                required />
-            <label for="email" class="label-email">
-                <span class="content-email">username</span>
-            </label>
+          <label for="username">Username</label>
+          <input #username type="text" class="form-control" id="username" />
         </div>
-
         <div class="form-group">
-            <input type="password"   [(ngModel)]="input.password"class="form-control" name="password" id="password" autocomplete="off" placeholder=" "
-                required />
-            <label for="login-password" class="label-loginpassword">
-                <span class="content-loginpassword">Password</span>
-            </label>
+          <label for="username">Password</label>
+          <input #password type="password" class="form-control" id="password" />
         </div>
-
-        <button class="btn- btn-info" type="submit" value="Log In" (click)="onLogin()">Log In</button>
-
-        <p class="forgot-password"><a href="">Forgot password?</a></p>
-    </form>
-</div>
+        <p class="text-center" > Don't have an account? <a href="/register" style="color:#be2b17;">Sign up here</a></p>
+        <button style="width: 100%; margin-top: 3%; margin-bottom: 5%;"
+          type="button"
+          
+          class="btn btn-primary"><a href="/"></a>
+          Login
+        </button>
+      </form>
+    </div>
+    
