@@ -17,7 +17,7 @@ export class AuthServiceService {
     console.log({ authResult });
 
     const token = authResult.access;
-    // const refresh = authResult.refresh;
+
     const payload = <Jwtpayload>jwtDecode(token);
     const expiresAt = moment.unix(payload.exp);
 

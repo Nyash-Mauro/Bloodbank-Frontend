@@ -15,6 +15,8 @@ import { RecipientFormComponent } from './components/admin-dashboard/recipient-f
 import { ProfileComponent } from './components/profile/profile.component';
 import { DashboardComponent } from './components/admin-dashboard/dashboard/dashboard.component';
 import { UserdashboardComponent } from './components/userdashboard/userdashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,14 @@ import { UserdashboardComponent } from './components/userdashboard/userdashboard
     RecipientFormComponent,
     ProfileComponent,
     DashboardComponent,
-    UserdashboardComponent,
-    
+    UserdashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
