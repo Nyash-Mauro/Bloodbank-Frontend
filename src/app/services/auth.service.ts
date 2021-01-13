@@ -18,12 +18,14 @@ export class AuthServiceService {
   }
 
   signup_form:FormGroup = new FormGroup({
+    // role:new FormControl('',Validators.required),
     first_name:new FormControl('',Validators.required),
     last_name:new FormControl('',Validators.required),
     email:new FormControl('',[Validators.email,Validators.required]),
     password:new FormControl('',[Validators.required,Validators.minLength(8)])
   });
   login_form:FormGroup = new FormGroup({
+    // role:new FormControl('',Validators.required),
     email:new FormControl('',[Validators.email,Validators.required]),
     password:new FormControl('',[Validators.required,Validators.minLength(8)]),
   });

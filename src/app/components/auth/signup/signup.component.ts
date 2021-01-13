@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from 'src/app/services/auth.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +9,7 @@ import {AuthService} from 'src/app/services/auth.service'
 })
 export class SignupComponent implements OnInit {
 
-  constructor(public authService:AuthService) { 
+  constructor(public authService:AuthService,private router: Router) { 
 
   }
 
@@ -18,7 +19,13 @@ register(){
   console.log(this.authService.signup_form.value);
   
   this.authService.register(this.authService.signup_form.value).subscribe(res=>{
-    console.log(res)
+    if(res['error']){
+      alert("Make sure all the fields are correct")
+    }
+    else{
+      alert("User created successfully")
+      this.router.navigate(['login'])
+    }
   })
 }
 }

@@ -7,6 +7,7 @@ import {DashboardComponent} from 'src/app/components/admin-dashboard/dashboard/d
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { LoginComponent } from './components/auth/login/login.component';
+import { DonorformComponent } from './component/donorform/donorform.component';
 
 import {ProfileComponent} from 'src/app/components/profile/profile.component';
 import { UserdashboardComponent } from './components/userdashboard/userdashboard.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactUsComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'donor', component: DonorformComponent},
   { path: '', redirectTo: "/home", pathMatch: "full" },
 
 ];

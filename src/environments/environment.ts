@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   loginEndpoint: 'https://bloodbankmanagementsystem.herokuapp.com/api/login/',
-  signUpEndpoint: 'https://bloodbankmanagementsystem.herokuapp.com/users/'
+  signUpEndpoint: 'https://bloodbankmanagementsystem.herokuapp.com/users/',
+  donationEndpoint:'https://bloodbankmanagementsystem.herokuapp.com/api/donations/'
   // signUpEndpoint: "http://127.0.0.1:8000/users/"
 };
 

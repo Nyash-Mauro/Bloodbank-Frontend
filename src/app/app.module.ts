@@ -21,6 +21,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { DonorformComponent } from './component/donorform/donorform.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {HttpClientModule} from '@angular/common/http';
     DashboardComponent,
     UserdashboardComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    DonorformComponent
   ],
   imports: [
     BrowserModule,
