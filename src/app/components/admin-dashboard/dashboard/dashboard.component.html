@@ -1,181 +1,148 @@
-<body id="body">
-    <div class="container">
-        <!-- <nav class="navbar">
-            <div class="nav_icon" onclick="toggleSidebar()">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </div>
-            <div class="navbar__left">
-                <a href="#">Subscribers</a>
-                <a href="#">User Management</a>
-                <a class="active_link" href="#">Admin</a>
-            </div>
-            <div class="navbar__right">
-                <a href="#">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <img width="30" src="assets/avatar.svg" alt="" />
-                    <i class="fa fa-user-circle-o" aria-hidden="true"></i> -->
-                <!-- </a>
-            </div>
-        </nav> -->
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <input type="text" placeholder="Search..">
-          </div>
-          <br>
-        <main>
-            <div class="main__container">
-              
-
-                <div class="main__title">
-                    <img src="" alt="" />
-                    <div class="main__greeting">
-                        <h1>Hello </h1>
-                        <p>Welcome to your admin dashboard</p>
-                        <input type="text" placeholder="Search..">
-                    </div>
-                </div>
-
-                <table style="width:100%">
-                    <!-- <td>{{donor.name }}</td>
-                    <td>{{ donor.email }}</td>
-                    <td>{{ donor.blo }}</td>
-                    <td>{{donor.}}</td> -->
-                    <tr>
-                      <td>Jill</td>
-                      <td>Smith</td>
-                      <td>50</td>
-                    </tr>
-                    <tr>
-                      <td>Eve</td>
-                      <td>Jackson</td>
-                      <td>94</td>
-                    </tr>
-                  </table>
-                
-                <!-- CHARTS ENDS HERE -->
-            </div>
-        </main>
-
-        <div id="sidebar">
-            <div class="sidebar__title">
-                <div class="sidebar__img">
-                    <img src="assets/logo.png" alt="logo" />
-                    <h1>Bloodbank</h1>
-                </div>
-                <i onclick="closeSidebar()" class="fa fa-times" id="sidebarIcon" aria-hidden="true"></i>
-            </div>
-
-            <div class="sidebar__menu">
-                <div class="sidebar__link active_menu_link">
-                    <i class="fa fa-home"></i>
-                    <a href="#">Dashboard</a>
-                </div>
-                <h2>MNG</h2>
-                <div class="sidebar__link">
-                    <i class="fa fa-user-secret" aria-hidden="true"></i>
-                    <a href="#">Admin Management</a>
-                </div>
-                <div class="sidebar__link">
-                    <i class="fa fa-building-o"></i>
-                    <a href="#">Donor Management</a>
-                </div>
-                <div class="sidebar__link">
-                    <i class="fa fa-wrench"></i>
-                    <a href="#">Recipient Management</a>
-                </div>
-                <div class="sidebar__logout">
-                    <i class="fa fa-power-off"></i>
-                    <a href="#">Log out</a>
-                </div>
-            </div>
+<div class="wrapper">
+    <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+        <app-navbar></app-navbar>
+        <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>
+    </div>
+    <div class="main-panel">
+        <app-navbar></app-navbar>
+        <router-outlet></router-outlet>
+        <div >
+            <app-footer></app-footer>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script>
-        var options = {
-            series: [
-                {
-                    name: "Net Profit",
-                    data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-                },
-                {
-                    name: "Revenue",
-                    data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-                },
-                {
-                    name: "Free Cash Flow",
-                    data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-                },
-            ],
-            chart: {
-                type: "bar",
-                height: 250, // make this 250
-                sparkline: {
-                    enabled: true, // make this true
-                },
-            },
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: "55%",
-                    endingShape: "rounded",
-                },
-            },
-            dataLabels: {
-                enabled: false,
-            },
-            stroke: {
-                show: true,
-                width: 2,
-                colors: ["transparent"],
-            },
-            xaxis: {
-                categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
-            },
-            yaxis: {
-                title: {
-                    text: "$ (thousands)",
-                },
-            },
-            fill: {
-                opacity: 1,
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return "$ " + val + " thousands";
-                    },
-                },
-            },
-        };
+    <div class="fixed-plugin">
+        <div class="dropdown show-dropdown open show">
+            <a href="#" data-toggle="dropdown" aria-expanded="true">
+                <i class="fa fa-cog fa-2x"> </i>
+            </a>
+            <ul class="dropdown-menu show" x-placement="bottom-start" style="position: absolute; top: 41px; left: -231px; will-change: top, left;">
+                <li class="header-title"> Sidebar Filters</li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger active-color">
+                        <div class="ml-auto mr-auto">
+                            <span class="badge filter badge-purple" data-color="purple"></span>
+                            <span class="badge filter badge-azure" data-color="azure"></span>
+                            <span class="badge filter badge-green" data-color="green"></span>
+                            <span class="badge filter badge-orange" data-color="orange"></span>
+                            <span class="badge filter badge-danger active" data-color="danger"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    <div class="ripple-container"></div></a>
+                </li>
+                <li class="header-title">Images</li>
+                <li>
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="./assets/img/sidebar-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="./assets/img/sidebar-2.jpg" alt="">
+                    <div class="ripple-container"></div></a>
+                </li>
+                <li>
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="./assets/img/sidebar-3.jpg" alt="">
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="./assets/img/sidebar-4.jpg" alt="">
+                    </a>
+                </li>
+                <li class="button-container">
+                    <div>
+                        <button class="btn btn-info btn-block btn-fill" data-toggle="modal" data-target="#buy">
+                            Download Free
+                        </button>
+                    </div>
+                </li>
+                <li class="button-container">
+                    <div>
+                        <button class="btn btn-warning btn-block btn-fill" data-toggle="modal" data-target="#buy">
+                            Buy Pro
+                        </button>
+                    </div>
+                </li>
+                <li class="button-container text-center" routerLinkActive="active">
+                  <div>
+                    <a class="btn btn-default btn-block" href="https://demos.creative-tim.com/material-dashboard-angular2/#/documentation/tutorial">
+                        View Documentation
+                    </a>
+                  </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Buy-Modal-angular -->
+<div class="modal modal-angular fade" id="buy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-body text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="margin-top">
+                Free Version
+            </h4>
+            <div class="separator"></div>
+            <a href="https://www.creative-tim.com/product/material-dashboard" class="modal-button" target="_blank">
+                <div class="wrapper-card">
+                    <div class="image-container">
+                        <img src="./assets/img/html.png" alt="unloaded">
+                    </div>
+                    Html5
+                    <div class="separator"></div>
+                    <div class="product-type">
+                        FREE
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.creative-tim.com/product/material-dashboard-angular2" class="modal-button" target="_blank">
+                <div class="wrapper-card">
+                    <div class="image-container image-angular-cli">
+                        <img src="./assets/img/angular.png" alt="unloaded">
+                    </div>
+                    Angular
+                    <div class="separator"></div>
+                    <div class="product-type">
+                        FREE
+                    </div>
+                </div>
+            </a>
+            <h4>
+                PRO Version
+            </h4>
+            <div class="separator"></div>
+            <a href="https://www.creative-tim.com/product/material-dashboard-pro" class="modal-button" target="_blank">
+                <div class="image-container">
+                    <img src="./assets/img/html.png" alt="unloaded">
+                </div>
+                Html5
+                <div class="separator"></div>
+                <div class="price">
+                    from
+                    <span>
+                        49
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </a>
+            <a href="https://www.creative-tim.com/product/material-dashboard-pro-angular2" class="modal-button" target="_blank">
+                <div class="image-container image-angular-cli">
+                    <img src="./assets/img/angular.png" alt="unloaded">
+                </div>
+                Angular
+                <div class="separator"></div>
+                <div class="price">
+                    from
+                    <span>
+                        59
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
-        var chart = new ApexCharts(document.querySelector("#apex1"), options);
-        chart.render();
-
-        // Sidebar Toggle Codes;
-
-        var sidebarOpen = false;
-        var sidebar = document.getElementById("sidebar");
-        var sidebarCloseIcon = document.getElementById("sidebarIcon");
-
-        function toggleSidebar() {
-            if (!sidebarOpen) {
-                sidebar.classList.add("sidebar_responsive");
-                sidebarOpen = true;
-            }
-        }
-
-        function closeSidebar() {
-            if (sidebarOpen) {
-                sidebar.classList.remove("sidebar_responsive");
-                sidebarOpen = false;
-            }
-        }
-    </script>
+</div>
