@@ -1,0 +1,46 @@
+<!-- Material form register -->
+<div class="container-fluid" mt-5>
+  <img src="https://cdn.pixabay.com/photo/2020/04/17/08/11/blood-5053770_960_720.jpg" alt="" height="400px"
+    width="100%">
+</div>
+
+<div class="container mt-5">
+  <div class="card">
+    <h5 class="card-header info-color white-text text-center py-4">
+      <strong>Sign In</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <form [formGroup]='authService.login_form' class="text-center" style="color: #757575;" (submit)="login()">
+
+    
+            <!-- E-mail -->
+            <div class="md-form mt-0">
+              <input type="email" class="form-control" formControlName="email">
+              <label for="materialRegisterFormEmail">E-mail</label>
+            </div>
+    
+            <!-- Password -->
+            <div class="md-form">
+              <input type="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+                formControlName="password">
+              <label for="materialRegisterFormPassword">Password</label>
+            </div>
+    
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Login</button>
+    
+            <hr>
+    
+            <!-- Terms of service -->
+            <p>By clicking
+              <em>Sign up</em> you agree to our
+              <a href="/login">terms of service</a>
+    
+          </form>
+    </div>
+
+  </div>
+</div>
