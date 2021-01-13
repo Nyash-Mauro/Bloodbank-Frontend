@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import jwtDecode from 'jwt-decode';
 import * as moment from 'moment';
 import { Jwtpayload } from '../models/jwtpayload';
 import { tap, shareReplay } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { environment } from '../../environments/environment'
+import { Observable, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,84 +14,36 @@ import { tap, shareReplay } from 'rxjs/operators';
 export class AuthServiceService {
   private apiRoot = '';
 
-  constructor(private http: HttpClient) {}
-
-  private setSession(authResult) {
-    console.log({ authResult });
-
-    const token = authResult.access;
-
-    const payload = <Jwtpayload>jwtDecode(token);
-    const expiresAt = moment.unix(payload.exp);
-
-    if (authResult.hasOwnProperty('refresh')) {
-      localStorage.setItem('token', authResult.access);
-      localStorage.setItem('refresh', authResult.refresh);
-      localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
-    } else {
-      localStorage.setItem('token', authResult.access);
-      localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
-    }
+  constructor(private http: HttpClient) {
   }
 
-  get token(): string {
-    return localStorage.getItem('token');
+  signup_form:FormGroup = new FormGroup({
+    first_name:new FormControl('',Validators.required),
+    last_name:new FormControl('',Validators.required),
+    email:new FormControl('',[Validators.email,Validators.required]),
+    password:new FormControl('',[Validators.required,Validators.minLength(8)])
+  });
+  login_form:FormGroup = new FormGroup({
+    email:new FormControl('',[Validators.email,Validators.required]),
+    password:new FormControl('',[Validators.required,Validators.minLength(8)]),
+  });
+
+  loginUrl = environment.loginEndpoint
+  registerUrl = environment.signUpEndpoint
+
+  login(loginDetails){
+    return this.http.post(this.loginUrl,loginDetails)
   }
-
-  get refresh(): string {
-    return localStorage.getItem('refresh');
-  }
-
-  login(username: string, password: string) {
-    return this.http
-      .post(this.apiRoot.concat('token/'), { username, password })
-      .pipe(
-        tap((response) => {
-          console.log({ response });
-          this.setSession(response);
-        }),
-        shareReplay()
-      );
-  }
-
-  logout() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('refresh');
-    localStorage.removeItem('expires_at');
-  }
-
-  refreshToken() {
-    if (
-      moment().isBetween(
-        this.getExpiration().subtract(1, 'days'),
-        this.getExpiration()
-      )
-    ) {
-      return this.http
-        .post(this.apiRoot.concat('token/refresh/'), { refresh: this.refresh })
-        .pipe(
-          tap((response) => {
-            console.log('refreshToken response ', response);
-            this.setSession(response);
-          }),
-          shareReplay()
-        )
-        .subscribe();
-    }
-  }
-
-  getExpiration() {
-    const expiration = localStorage.getItem('expires_at');
-    const expiresAt = JSON.parse(expiration);
-
-    return moment(expiresAt);
-  }
-
-  isLoggedIn() {
-    return moment().isBefore(this.getExpiration());
-  }
-
-  isLoggedOut() {
-    return !this.isLoggedIn();
+  register(registerDetails){
+    return this.http.post(this.registerUrl,registerDetails)
   }
 }
+
+
+/* import
+        ReactiveFormsModule - app module
+        vFormsModule - app module
+        HttpService - app module
+        call http service in ctor - auth service
+        register service in provider - app module
+*/

@@ -7,21 +7,23 @@ import {AuthServiceService} from 'src/app/services/auth.service'
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(
-    private authService: AuthServiceService,
-    private router: Router
-  ) {}
+  // constructor(
+  //   private authService: AuthServiceService,
+  //   private router: Router
+  // ) {}
 
-  canActivate() {
-    if (this.authService.isLoggedIn()) {
-      this.authService.refreshToken();
+  // canActivate() {
+  //   if (this.authService.isLoggedIn()) {
+  //     this.authService.refreshToken();
 
-      return true;
-    } else {
-      this.authService.logout();
-      this.router.navigate(['login']);
+  //     return true;
+  //   } else {
+  //     this.authService.logout();
+  //     this.router.navigate(['login']);
 
-      return false;
-    }
-  }
+  //     return false;
+  //   }
+  // }
 }
+  
+
