@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
+import jwtDecode from 'jwt-decode';
+import * as moment from 'moment';
+import { Jwtpayload } from '../models/jwtpayload';
+import { tap, shareReplay } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { environment } from '../../environments/environment'
 import { Observable, from } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class AuthService {
+export class AuthServiceService {
+  private apiRoot = '';
 
   constructor(private http: HttpClient) {
   }

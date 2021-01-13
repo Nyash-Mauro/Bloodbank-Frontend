@@ -10,6 +10,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RecipientFormComponent } from './components/admin-dashboard/recipient-form/recipient-form.component';
 import { ProfileComponent } from './components/profile/profile.component';
+// import { DashboardComponent } from './components/admin-dashboard/dashboard/dashboard.component';
+import { UserdashboardComponent } from './components/userdashboard/userdashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 // import { AdminAddUserComponent } from './components/admin-dashboard/admin-add-user/admin-add-user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
@@ -32,6 +36,7 @@ import { DonorformComponent } from './component/donorform/donorform.component';
     ProfileComponent,
     // AdminAddUserComponent,
     DashboardComponent,
+    UserdashboardComponent,
     SignupComponent,
     LoginComponent,
     DonorformComponent
@@ -39,6 +44,9 @@ import { DonorformComponent } from './component/donorform/donorform.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgModule,
+    BrowserAnimationsModule,
+    MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule
