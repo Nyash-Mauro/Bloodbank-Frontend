@@ -15,7 +15,13 @@
 
       <!-- Form -->
       <form [formGroup]='authService.signup_form' class="text-center" style="color: #757575;" (submit)="register()">
-
+        <div class="form-row pt-4">
+          <select class="browse-default custom-select" aria-label="Default select example" formControlName="role">
+            <option selected>Choose Role</option>
+            <option value="1">Donor</option>
+            <option value="2">Recepient</option>
+          </select>
+        </div>
         <div class="form-row">
           <div class="col">
             <!-- First name -->

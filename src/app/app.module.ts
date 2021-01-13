@@ -5,8 +5,6 @@ import { AppComponent } from './app.component';
 import { CampsComponent } from './components/camps/camps.component';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RecepientRegistrationComponent } from './components/auth/recepient-registration/recepient-registration.component';
-import { DonorRegistrationComponent } from './components/auth/donor-registration/donor-registration.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -19,6 +17,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { DonorformComponent } from './component/donorform/donorform.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,6 @@ import {HttpClientModule} from '@angular/common/http';
     CampsComponent,
     AboutComponent,
     NavbarComponent,
-    RecepientRegistrationComponent,
-    DonorRegistrationComponent,
     HomeComponent,
     FooterComponent,
     ContactUsComponent,
@@ -36,7 +33,8 @@ import {HttpClientModule} from '@angular/common/http';
     // AdminAddUserComponent,
     DashboardComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    DonorformComponent
   ],
   imports: [
     BrowserModule,
