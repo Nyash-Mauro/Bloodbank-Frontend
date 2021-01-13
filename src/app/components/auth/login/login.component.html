@@ -13,39 +13,33 @@
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
 
-      <!-- Form -->
-      <form class="text-center" style="color: #757575;">
-        <!-- E-mail -->
-        <div class="form-row pt-4">
-          <select class="browse-default custom-select" [(ngModel)]="role" name="role">
-            <option selected>Choose Role</option>
-            <option [value]="1">Donor</option>
-            <option [value]="2">Recepient</option>
-          </select>
-        </div>
-        <div class="md-form mt-0">
-          <input type="email" class="form-control" [(ngModel)]="email" name="email">
-          <label for="materialRegisterFormEmail">E-mail</label>
-        </div>
+        <form [formGroup]='authService.login_form' class="text-center" style="color: #757575;" (submit)="login()">
 
-        <!-- Password -->
-        <div class="md-form">
-          <input type="password" class="form-control" [(ngModel)]="password" name="password">
-          <label for="materialRegisterFormPassword">Password</label>
-        </div>
-
-        <!--Login button -->
-        <button (click)="login()"
-          class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Login</button>
-
-        <hr>
-
-        <!-- Terms of service -->
-        <p>By clicking
-          <em>Sign up</em> you agree to our
-          <a href="#">terms of service</a>
-
-      </form>
+    
+            <!-- E-mail -->
+            <div class="md-form mt-0">
+              <input type="email" class="form-control" formControlName="email">
+              <label for="materialRegisterFormEmail">E-mail</label>
+            </div>
+    
+            <!-- Password -->
+            <div class="md-form">
+              <input type="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+                formControlName="password">
+              <label for="materialRegisterFormPassword">Password</label>
+            </div>
+    
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Login</button>
+    
+            <hr>
+    
+            <!-- Terms of service -->
+            <p>By clicking
+              <em>Sign up</em> you agree to our
+              <a href="/login">terms of service</a>
+    
+          </form>
     </div>
 
   </div>

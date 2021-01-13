@@ -1,38 +1,43 @@
-<p>donorform works!</p>
-<!-- Default form contact -->
-<form class="text-center border border-light p-5" action="#!">
-
-    <p class="h4 mb-4">Contact us</p>
-
-    <!-- Name -->
-    <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
-
-    <!-- Email -->
-    <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-    <!-- Subject -->
-    <label>Subject</label>
-    <select class="browser-default custom-select mb-4">
-        <option value="" disabled>Choose option</option>
-        <option value="1" selected>Feedback</option>
-        <option value="2">Report a bug</option>
-        <option value="3">Feature request</option>
-        <option value="4">Feature request</option>
-    </select>
-
-    <!-- Message -->
-    <div class="form-group">
-        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+ 
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://cdn.pixabay.com/photo/2017/02/15/20/58/ekg-2069872_960_720.png" alt="" height="600px">
+      </div>
+  
+      <div class="col-md-6">
+        <h1>Donate Blood</h1>
+        <form id="get-form" class="form" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" name="facility" id="facility"
+              autocomplete="off" placeholder=" " required />
+            <label for="first_name" class="label-username">
+              <span class="content-first_name">Facility</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="location" id="facility"
+              autocomplete="off" placeholder=" " required />
+            <label for="first_name" class="label-username">
+              <span class="content-first_name">Location</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="bloodgroup" id="bloodgroup"
+              autocomplete="off" placeholder=" " required />
+            <label for="last_name" class="label-last_name">
+              <span class="content-last_name">Bloodgroup</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="condition" id="condition"
+              autocomplete="off" placeholder=" " required />
+            <label for="first_name" class="label-username">
+              <span class="content-first_name">Medical Condition</span>
+            </label>
+          </div>
+          <button class="btn btn-red">Register</button>
+        </form>
+      </div>
     </div>
-
-    <!-- Copy -->
-    <div class="custom-control custom-checkbox mb-4">
-        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-        <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
-    </div>
-
-    <!-- Send button -->
-    <button class="btn btn-info btn-block" type="submit">Send</button>
-
-</form>
-<!-- Default form contact -->
+  </div>
